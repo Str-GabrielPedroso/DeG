@@ -9,7 +9,7 @@ const cardFinish = document.querySelector(`.card_finish`)
 const btnNext = document.getElementById(`next_btn`)
 const myAudio = document.getElementById(`my_audio`)
 
-let questionIndex = 9
+let questionIndex = 0
 
 const questions = [
     {
