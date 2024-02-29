@@ -9,7 +9,7 @@ const cardFinish = document.querySelector(`.card_finish`)
 const btnNext = document.getElementById(`next_btn`)
 const myAudio = document.getElementById(`my_audio`)
 
-let questionIndex = 0
+let questionIndex = 9
 
 const questions = [
     {
@@ -102,6 +102,15 @@ const questions = [
     }
 ]
 
+function addFilter() {
+    const images = document.querySelectorAll('.scroll img');
+    images.forEach(image => {
+        image.classList.add('filter');
+    })
+}
+
+addFilter()
+
 btnStart.addEventListener(`click`, () => {
     console.log(verifyDate.value, verifyName.value)
     if (verifyDate.value === `2023-05-01` && (
@@ -172,6 +181,18 @@ btnNext.addEventListener(`click`, () => {
             cardQuiz.classList.add(`invisible_card`)
             cardFinish.classList.remove(`invisible_card`)
             myAudio.play()
+            blurImages()
         }
     }
 })
+
+function blurImages() {
+    setTimeout(() => {
+        cardFinish.classList.add(`invisible_card`);
+        const images = document.querySelectorAll('.scroll img');
+        images.forEach(image => {
+            image.classList.remove('filter');
+            image.classList.add('remove_filter');
+        })
+    }, 5 * 1000);
+}

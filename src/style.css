@@ -32,18 +32,25 @@ body {
     animation-delay: calc(80s / -2);
 }
 
-.scroll img {
+img {
     margin-top: 10px;
-    width: 230px;
-    height: auto;
-    max-height: 285px;
+    width: 220px;
+    height: 245px;
     scale: 0.8;
+}
+
+.filter {
     filter: grayscale(1) blur(2px);
 }
 
-.scroll img:hover {
+img:hover {
     filter: grayscale(0.7);
 }
+
+img .remove_filter {
+    filter: none !important;
+}
+
 
 @keyframes animate1 {
     0% {
@@ -72,12 +79,12 @@ body {
     position: fixed;
     border-radius: 15px;
     padding: 10px 25px;
-    background-color: #1d141a;
+    background-color: #636851;
     color: #ffffff;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #61535c;
+    border: 2px solid #99a285;
 }
 
 .card_login #verify_name,
@@ -88,12 +95,12 @@ button {
     border: none;
     outline: none;
     margin-top: 15px;
-    background-color: #d4becf;
+    background-color: #a3a277;
 }
 
 .card_login button {
-    background-color: #836a7d;
-    color: #ffffff;
+    background-color: #a0b179;
+    color: #f5f5f5;
 }
 
 .card_login .date_span {
@@ -107,12 +114,12 @@ button {
     padding: 6px;
     border: none;
     outline: none;
-    background-color: #d4becf;
+    background-color: #a3a277;
 }
 
 .card_login button:hover {
     cursor: pointer;
-    background-color: #c086a1f1;
+    background-color: #cacda5;
 }
 
 .card_finish {
@@ -122,41 +129,41 @@ button {
     position: fixed;
     border-radius: 15px;
     padding: 10px 25px;
-    background-color: #1d141a;
-    color: #ffffff;
+    background-color: #636851;
+    color: #f5f5f5;
     font-size: 60px;
     letter-spacing: 10px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #61535c;
+    border: 2px solid #99a285;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .questions_card {
-    height: 420px;
     max-width: 350px;
     width: 100%;
     position: fixed;
     border-radius: 15px;
-    padding: 10px 25px;
-    background-color: #1d141a;
-    color: #ffffff;
+    padding: 10px 25px 35px;
+    background-color: #636851;
+    color: #f5f5f5;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: 2px solid #61535c;
+    border: 2px solid #a0b179;
 }
 
 .questions_card button {
-    border: 1px solid #836a7d;
+    border: 1px solid #a0b179;
+    color: #f5f5f5;
 }
 
 .questions_card button:hover {
     cursor: pointer;
-    border: 1px solid #ffffff;
+    border: 1px solid #f5f5f5;
 }
 
 #question_element {
@@ -169,12 +176,12 @@ button {
 
 .questions_card #next_btn {
     margin-top: 40px;
-    background: #735273;
+    background: #a0b179;
     color: #ffffff;
 }
 
 #next_btn:hover {
-    background: #836a7d;
+    background: #99a285;
 }
 
 .invisible_card {
